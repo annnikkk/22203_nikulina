@@ -24,7 +24,6 @@ struct Value {
 };
 
 
-
 class HashTable
 {
 public:
@@ -53,9 +52,6 @@ public:
 
     HashTable(const HashTable&& b);
 
-    // Обменивает значения двух хэш-таблиц.
-    // Подумайте, зачем нужен этот метод, при наличии стандартной функции
-    // std::swap.
     void swap(HashTable& b);
 
     HashTable& operator=(const HashTable& b){
@@ -70,16 +66,12 @@ public:
         return *this;
     }
 
-
-    // Очищает контейнер.
     void clear(){
         for(int i = 0; i < capacity; ++i){
             table[i].clear();
         }
     }
 
-
-    // Удаляет элемент по заданному ключу.
     bool erase(const Key& k){
         unsigned int index = HashFunction(k);
         list<pair<Key, struct Value>>::iterator i;
@@ -97,13 +89,34 @@ public:
         }
     }
 
-    // Вставка в контейнер. Возвращаемое значение - успешность вставки.
+    void resize(size_t new_size){
+        auto *tmp = new list<pair<Key, struct Value>>[new_size];
+        for (int i = 0; i < capacity; ++i) {
+            list<pair<Key, struct Value>>::iterator k;
+            for (k = table[i].begin(); k != table[i].end(); ++k) {
+                tmp[HashFunction(k->first)].push_back({k->first, k->second});
+            }
+        }
+        delete[] table;
+        table = new list<pair<Key, struct Value>>[new_size];
+        for (int i = 0; i < capacity; ++i) {
+            list<pair<Key, struct Value>>::iterator k;
+            for (k = tmp[i].begin(); k != tmp[i].end(); ++k) {
+                table[i].push_back({k->first, k->second});
+            }
+        }
+    }
+
     bool insert(const Key& k, const Value& v){
         unsigned int index = HashFunction(k);
+        double coef = (double)size()/(double)capacity;
+        if(coef >= 0.7 ){
+            capacity *= 2;
+            resize(capacity);
+        }
         table[index].push_back({k, v});
     }
 
-    // Проверка наличия значения по заданному ключу.
     bool contains(const Key& k) const{
         unsigned int index = HashFunction(k);
         list<pair<Key, struct Value>>::iterator i;
@@ -120,10 +133,6 @@ public:
         }
     }
 
-
-    // Возвращает значение по ключу. Небезопасный метод.
-    // В случае отсутствия ключа в контейнере, следует вставить в контейнер
-    // значение, созданное конструктором по умолчанию и вернуть ссылку на него.
     Value& operator[](const Key& k){
         unsigned int index = HashFunction(k);
         list<pair<Key, struct Value>>::iterator i;
@@ -137,7 +146,6 @@ public:
         return table[index].end()->second;
     }
 
-    // Возвращает значение по ключу. Бросает исключение при неудаче.
     Value& at(const Key& k);
     const Value& at(const Key& k) const;
 
@@ -150,7 +158,6 @@ public:
         }
         return k;
     }
-
 
     bool empty() const{
         for(int i = 0; i < capacity; ++i){
@@ -173,7 +180,6 @@ public:
         return true;
     }
 
-
     friend bool operator!=(const HashTable& a, const HashTable& b){
         for(int i = 0; i < a.capacity; ++i){
             list<pair<Key, struct Value>>::iterator k, l;
@@ -186,14 +192,13 @@ public:
         return false;
     }
 
-
 private:
     size_t capacity = 0;
     list<pair<Key, struct Value>> *table;
 
     unsigned int HashFunction(const Key& k) const {
         unsigned int res;
-        res = (k[0]%5)+(k[1]%5)+(k[k.size() - 2]%5)+(k.back()%5);
+        res = ((k[0])*(k[1])*(k[k.size() - 2])*(k.back()))%capacity;
         return res;
     };
 };
