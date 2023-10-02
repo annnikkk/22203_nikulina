@@ -22,13 +22,15 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="209d07bb-1e4d-49cc-85d4-1475513cb8f6" name="Changes" comment="first version">
+    <list default="true" id="209d07bb-1e4d-49cc-85d4-1475513cb8f6" name="Changes" comment="second version">
+      <change afterPath="$PROJECT_DIR$/lab1/hash_table.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lab1/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/cmake-build-debug/.cmake/api/v1/reply/cache-v2-b4ec827d0f9dca427fbf.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-0156143cf1aea740dee1.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/cmake-build-debug/.cmake/api/v1/reply/index-2023-09-25T16-07-06-0159.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/cmake-build-debug/.cmake/api/v1/reply/target-lab1_test-Debug-e1b587af24e7d69298ba.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/cmake-build-debug/.cmake/api/v1/reply/cache-v2-617da1a203be83234682.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-2b777fe9f930d4afdbc3.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/cmake-build-debug/.cmake/api/v1/reply/index-2023-09-26T18-06-18-0402.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/cmake-build-debug/.cmake/api/v1/reply/target-lab1-Debug-4a8965b7ff0afc1a226f.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/cmake-build-debug/.cmake/api/v1/reply/target-lab1_test-Debug-8a544d91b71a854adbc3.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/lab1/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lab1/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/cmake-build-debug/.ninja_log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lab1/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/cmake-build-debug/CMakeCache.txt" afterDir="false" />
@@ -36,9 +38,9 @@
       <change beforePath="$PROJECT_DIR$/lab1/cmake-build-debug/CMakeFiles/rules.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/cmake-build-debug/CMakeFiles/rules.ninja" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lab1/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lab1/cmake-build-debug/_deps/googletest-subbuild/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/cmake-build-debug/_deps/googletest-subbuild/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/cmake-build-debug/build.ninja" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lab1/cmake-build-debug/lab1_test.exe" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/cmake-build-debug/lab1_test.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lab1/hash_table.h" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/hash_table.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/test.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,17 +74,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "settings.editor.selected.configurable": "CMakeSettings"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;CMakeSettings&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\User\CLionProjects\22203_nikulina\lab1" />
@@ -147,7 +149,10 @@
       <workItem from="1695292538601" duration="7800000" />
       <workItem from="1695385294617" duration="2407000" />
       <workItem from="1695402235962" duration="867000" />
-      <workItem from="1695536444681" duration="40146000" />
+      <workItem from="1695536444681" duration="40324000" />
+      <workItem from="1695874520462" duration="3014000" />
+      <workItem from="1696159626034" duration="600000" />
+      <workItem from="1696245705356" duration="4549000" />
     </task>
     <task id="LOCAL-00001" summary="settings">
       <created>1695292122955</created>
@@ -163,7 +168,14 @@
       <option name="project" value="LOCAL" />
       <updated>1695659373049</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="second version">
+      <created>1695755262412</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1695755262412</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -183,6 +195,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="settings" />
     <MESSAGE value="first version" />
-    <option name="LAST_COMMIT_MESSAGE" value="first version" />
+    <MESSAGE value="second version" />
+    <option name="LAST_COMMIT_MESSAGE" value="second version" />
   </component>
 </project>
