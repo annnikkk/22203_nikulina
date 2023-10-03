@@ -1,5 +1,4 @@
-#ifndef LAB1_HASH_TABLE_H
-#define LAB1_HASH_TABLE_H
+#pragma once
 
 #include <string>
 #include <list>
@@ -32,7 +31,7 @@ public:
 
     HashTable(const HashTable& b);
 
-    HashTable(const HashTable&& b);
+    HashTable(HashTable&& b);
 
     void swap(HashTable& b);
 
@@ -54,7 +53,7 @@ public:
     Value& operator[](const Key& k);
 
     Value& at(const Key& k);
-    const Value& at(const Key& k) const; // константная ссылка
+    const Value& at(const Key& k) const;
 
     size_t size() const;
 
@@ -65,12 +64,10 @@ public:
     friend bool operator!=(const HashTable& a, const HashTable& b);
 
 private:
-    size_t capacity = 0;
+    size_t capacity;
     size_t cur_size;
     std::list<std::pair<Key, struct Value>> *table;
 
     unsigned int HashFunction(const Key& k) const;
 };
 
-
-#endif //LAB1_HASH_TABLE_H
