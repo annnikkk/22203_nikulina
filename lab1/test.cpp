@@ -24,6 +24,8 @@ TEST(CopyConstr, MakingCopy){ //copy, ==
     table1.insert("Yana", {14, 30});
     HashTable table2 = HashTable(table1);
     EXPECT_EQ(table1 == table2, 1);
+    table2 = HashTable(table2);
+    EXPECT_EQ(table1 == table2, 1);
 }
 
 TEST(EquallyOperator, Comparison) { // ==, resize
@@ -69,8 +71,15 @@ TEST(Swap, IsTableSwapped) { //swap
     table2.insert("Igor", {50, 90});
     table1.swap(table2);
     EXPECT_EQ(table2.contains("Yana"), 1);
+    EXPECT_EQ(table2.contains("Antonina"), 1);
+    EXPECT_EQ(table2.contains("Anna"), 1);
+    EXPECT_EQ(table2.contains("Igor"), 0);
     EXPECT_EQ(table1.contains("Igor"), 1);
+    EXPECT_EQ(table1.contains("Anna"), 0);
+    EXPECT_EQ(table1.contains("Yana"), 0);
+    EXPECT_EQ(table1.contains("Antonina"), 0);
     EXPECT_EQ(table2.size(), 3);
+    EXPECT_EQ(table1.size(), 1);
 }
 
 TEST(AssignmentOperator, AssignsValue) { //operator=
@@ -98,6 +107,51 @@ TEST(FindOperator, FindKey) { //operator[]
     HashTable table1 = HashTable();
     table1.insert("Anna", {30, 60});
     table1.insert("Antonina", {14, 30});
-    EXPECT_EQ(table1.operator[]("Anna").age, 30);
-    EXPECT_EQ(table1.operator[]("Anna").weight, 60);
+    EXPECT_EQ(table1["Anna"].age, 30);
+    EXPECT_EQ(table1["Anna"].weight, 60);
+    table1["NoName"];
+    EXPECT_EQ(table1["NoName"].age, 30);
+    EXPECT_EQ(table1["NoName"].weight, 80);
+}
+
+TEST(At, FindKey) { //at
+    HashTable table1 = HashTable();
+    table1.insert("Anna", {30, 60});
+    table1.insert("Antonina", {14, 30});
+    EXPECT_EQ(table1.at("Anna").age, 30);
+    EXPECT_EQ(table1.at("Anna").weight, 60);
+}
+
+/*TEST(At2, FindKey) { //at
+    const HashTable table1 = HashTable();
+    const Key a = "Anna";
+    EXPECT_EQ(table1.at(a).age, std::exception);
+}*/
+
+TEST(NotEqual, Comparing){
+    HashTable table1 = HashTable();
+    HashTable table2 = HashTable();
+    table1.insert("Anna", {19, 45});
+    table2.insert("Ann", {19, 45});
+    EXPECT_EQ(table1 != table2, 1);
+    table2.erase("Ann");
+    table2.insert("Anna", {19, 45});
+    EXPECT_EQ(table1 != table2, 0);
+}
+
+TEST(ResizeInInsert, Resizing) {
+    HashTable table1 = HashTable(3);
+    table1.insert("Anna", {30, 60});
+    table1.insert("Antonina", {14, 30});
+    table1.insert("Misha", {14, 30});
+    table1.insert("NoName", {30, 60});
+    table1.insert("NoName1", {14, 30});
+    table1.insert("Noname1", {14, 30});
+    EXPECT_EQ(table1.contains("NoName1"), 1);
+    EXPECT_EQ(table1.contains("Noname1"), 1);
+    EXPECT_EQ(table1.contains("Anna"), 1);
+    EXPECT_EQ(table1.contains("NoName"), 1);
+    EXPECT_EQ(table1.contains("Antonina"), 1);
+    EXPECT_EQ(table1.contains("Misha"), 1);
+    EXPECT_EQ(table1.size(), 6);
 }

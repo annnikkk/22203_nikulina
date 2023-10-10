@@ -19,15 +19,34 @@
   <component name="CMakeSettings">
     <configurations>
       <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+      <configuration PROFILE_NAME="Debug-Coverage" ENABLED="true" CONFIG_NAME="Debug" GENERATION_OPTIONS="-DCMAKE_CXX_FLAGS=--coverage -DCMAKE_C_FLAGS=--coverage" />
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="209d07bb-1e4d-49cc-85d4-1475513cb8f6" name="Changes" comment="file splitted">
+    <list default="true" id="209d07bb-1e4d-49cc-85d4-1475513cb8f6" name="Changes" comment="final version(?)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/cmake-build-debug/.cmake/api/v1/reply/cache-v2-b4ec827d0f9dca427fbf.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-b84a85bb299fae200ded.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-51564829b4767d4a8e31.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/cmake-build-debug/.cmake/api/v1/reply/index-2023-10-02T11-48-29-0737.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/cmake-build-debug/.cmake/api/v1/reply/target-gmock_main-Debug-876bdab21a4917efef65.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/cmake-build-debug/.cmake/api/v1/reply/target-lab1-Debug-7078f37fc2e9f3308018.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/cmake-build-debug/.cmake/api/v1/reply/target-lab1_test-Debug-edfe3c48c0fc02fe7811.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/lab1/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lab1/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/cmake-build-debug/.ninja_log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/cmake-build-debug/CMakeFiles/lab1_test.dir/test.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/cmake-build-debug/CMakeFiles/lab1_test.dir/test.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/cmake-build-debug/CMakeFiles/3.23.2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/cmake-build-debug/CMakeFiles/3.23.2/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/cmake-build-debug/CMakeFiles/3.23.2/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/cmake-build-debug/CMakeFiles/3.23.2/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/cmake-build-debug/CMakeFiles/3.23.2/CompilerIdC/a.exe" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/cmake-build-debug/CMakeFiles/3.23.2/CompilerIdC/a.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/cmake-build-debug/CMakeFiles/3.23.2/CompilerIdCXX/a.exe" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/cmake-build-debug/CMakeFiles/3.23.2/CompilerIdCXX/a.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/cmake-build-debug/CMakeFiles/lab1.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/cmake-build-debug/CMakeFiles/lab1.dir/main.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/cmake-build-debug/CMakeFiles/lab1_test.dir/test.cpp.obj" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/lab1/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/cmake-build-debug/build.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/cmake-build-debug/lab1.exe" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/cmake-build-debug/lab1.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lab1/cmake-build-debug/lab1_test.exe" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/cmake-build-debug/lab1_test.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lab1/hash_table.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/hash_table.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lab1/hash_table.h" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/hash_table.h" afterDir="false" />
@@ -41,7 +60,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug-Coverage" />
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -65,18 +84,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "cf.advertisement.text.has.clang-format": "true",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "settings.editor.selected.configurable": "CMakeSettings"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;cf.advertisement.text.has.clang-format&quot;: &quot;true&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;CMakeSettings&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\User\CLionProjects\22203_nikulina\lab1" />
@@ -87,6 +106,12 @@
     <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ResizeInInsert.Resizing" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="lab1" TARGET_NAME="lab1_test" RUN_TARGET_PROJECT_NAME="lab1" RUN_TARGET_NAME="lab1_test" TEST_CLASS="ResizeInInsert" TEST_METHOD="Resizing" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
       </method>
     </configuration>
     <configuration name="lab1_test" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="lab1" TARGET_NAME="lab1_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="lab1" RUN_TARGET_NAME="lab1_test" TEST_MODE="SUITE_TEST">
@@ -127,7 +152,13 @@
       <item itemvalue="CMake Application.gtest" />
       <item itemvalue="CMake Application.gtest_main" />
       <item itemvalue="Google Test.lab1_test" />
+      <item itemvalue="Google Test.ResizeInInsert.Resizing" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Google Test.ResizeInInsert.Resizing" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -144,7 +175,9 @@
       <workItem from="1695536444681" duration="40324000" />
       <workItem from="1695874520462" duration="3014000" />
       <workItem from="1696159626034" duration="600000" />
-      <workItem from="1696245705356" duration="27472000" />
+      <workItem from="1696245705356" duration="42930000" />
+      <workItem from="1696906370154" duration="2239000" />
+      <workItem from="1696926733325" duration="11964000" />
     </task>
     <task id="LOCAL-00001" summary="settings">
       <created>1695292122955</created>
@@ -174,7 +207,14 @@
       <option name="project" value="LOCAL" />
       <updated>1696250567453</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="final version(?)">
+      <created>1696357503992</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1696357503992</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,6 +236,21 @@
     <MESSAGE value="first version" />
     <MESSAGE value="second version" />
     <MESSAGE value="file splitted" />
-    <option name="LAST_COMMIT_MESSAGE" value="file splitted" />
+    <MESSAGE value="final version(?)" />
+    <option name="LAST_COMMIT_MESSAGE" value="final version(?)" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/lab1/test.cpp</url>
+          <line>141</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="../../../../CLionProjects/22203_nikulina/lab1/cmake-build-debug-coverage" NAME="lab1_test Coverage Results" MODIFIED="1696950852308" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="gcov/llvm" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

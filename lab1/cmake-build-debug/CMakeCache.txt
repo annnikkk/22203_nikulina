@@ -387,15 +387,6 @@ lab1_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 lab1_SOURCE_DIR:STATIC=C:/Users/User/CLionProjects/22203_nikulina/lab1
 
-//Value Computed by CMake
-nsuoop-cpp-template_BINARY_DIR:STATIC=C:/Users/User/CLionProjects/22203_nikulina/lab1/cmake-build-debug
-
-//Value Computed by CMake
-nsuoop-cpp-template_IS_TOP_LEVEL:STATIC=ON
-
-//Value Computed by CMake
-nsuoop-cpp-template_SOURCE_DIR:STATIC=C:/Users/User/CLionProjects/22203_nikulina/lab1
-
 
 ########################
 # INTERNAL cache entries

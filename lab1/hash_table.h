@@ -35,20 +35,19 @@ public:
 
     void swap(HashTable& b);
 
-    HashTable& operator=(const HashTable& b);
+    HashTable& operator=(const HashTable& b);  //????????????????
+
+    HashTable&& operator=(HashTable &&b);
 
     void clear();
 
     bool erase(const Key& k);
 
-
     void resize(size_t new_size);
 
     bool insert(const Key& k, const Value& v);
 
-
     bool contains(const Key& k) const;
-
 
     Value& operator[](const Key& k);
 
@@ -66,8 +65,11 @@ public:
 private:
     size_t capacity;
     size_t cur_size;
+    double ResizingCoef = 0.65;
+    size_t NewCapacity = capacity * 2;
     std::list<std::pair<Key, struct Value>> *table;
 
-    unsigned int HashFunction(const Key& k) const;
+    size_t HashFunction(const Key& k) const;
 };
+
 

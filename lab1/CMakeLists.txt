@@ -2,6 +2,8 @@ cmake_minimum_required(VERSION 3.23)
 project(lab1)
 
 set(CMAKE_CXX_STANDARD 17)
+set(COMPILE_FLAGS "--coverage")
+set(CMAKE_EXE_LINKER_FLAGS "--coverage")
 
 add_executable(lab1 main.cpp hash_table.cpp)
 
