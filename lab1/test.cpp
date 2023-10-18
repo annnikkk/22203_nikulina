@@ -89,18 +89,33 @@ TEST(AssignmentOperator, AssignsValue) { //operator=
     table1.insert("Antonina", {14, 30});
     table1.insert("Yana", {14, 30});
     table2 = table1;
+    EXPECT_EQ(table2.contains("Anna"), 1);
+    EXPECT_EQ(table2.contains("Antonina"), 1);
     EXPECT_EQ(table2.contains("Yana"), 1);
     EXPECT_EQ(table2.size(), 3);
 }
 
-TEST(Erase, ErasingKey) { //erase
+TEST(AssignmentOperator, SizesNotEqual) { //==?
     HashTable table1 = HashTable();
+    HashTable table2 = HashTable();
+    table1.insert("Anna", {30, 60});
+    table1.insert("Antonina", {14, 30});
+    table2.insert("Yana", {14, 30});
+    EXPECT_EQ(table1==table2, 0);
+}
+
+TEST(Erase, ErasingKey) { //erase
+    HashTable table1 = HashTable(2);
     table1.insert("Anna", {30, 60});
     table1.insert("Antonina", {14, 30});
     table1.insert("Yana", {14, 30});
     table1.erase("Anna");
+    table1.erase("Antonina");
+    table1.erase("Yana");
     EXPECT_EQ(table1.contains("Anna"), 0);
-    EXPECT_EQ(table1.size(), 2);
+    EXPECT_EQ(table1.contains("Antonina"), 0);
+    EXPECT_EQ(table1.contains("Yana"), 0);
+    EXPECT_EQ(table1.size(), 0);
 }
 
 TEST(FindOperator, FindKey) { //operator[]

@@ -16,9 +16,9 @@ HashTable::~HashTable() {
     delete[] table;
 }
 
-HashTable::HashTable(const HashTable &b){
-    capacity = b.capacity;
-    cur_size = b.cur_size;
+HashTable::HashTable(const HashTable &b) :
+        capacity(b.capacity),
+        cur_size(b.cur_size) {
     table = new std::list<std::pair<Key, struct Value>>[capacity];
     for (size_t i = 0; i < capacity; ++i) {
         std::copy(b.table[i].begin(), b.table[i].end(), std::back_inserter(table[i]));
@@ -98,7 +98,7 @@ void HashTable::resize(size_t new_capacity){
 
 bool HashTable::insert(const Key &k, const Value &v) {
     if(contains(k)) return true;
-    double coef = (double)size()/(double)capacity;
+    double coef = (double)cur_size/(double)capacity;
     if(coef >= ResizingCoef ){
         resize(NewCapacity);
     }
@@ -125,7 +125,7 @@ Value &HashTable::operator[](const Key &k) {
             return i->second;
         }
     }
-    table[index].push_back({k, Value()});//????????????????????????????
+    table[index].push_back({k, Value()});
     return table[index].end()->second;
 }
 
