@@ -1,6 +1,7 @@
 #include "hash_table.h"
 
 #include<algorithm>
+#include <stdexcept>
 
 HashTable::HashTable() : HashTable(256) {
 }
@@ -8,7 +9,7 @@ HashTable::HashTable() : HashTable(256) {
 HashTable::HashTable(size_t initial_capacity) :
         capacity(initial_capacity),
         cur_size(0) {
-        table = new std::list<std::pair<Key, struct Value>>[initial_capacity];
+    table = new std::list<std::pair<Key, struct Value>>[initial_capacity];
 }
 
 HashTable::~HashTable() {
@@ -54,14 +55,14 @@ HashTable& HashTable::operator=(const HashTable &b){
     return *this;
 }
 
-HashTable&& HashTable::operator=(HashTable &&b) {
+HashTable& HashTable::operator=(HashTable &&b) {
     cur_size = b.cur_size;
     capacity = b.capacity;
     table = b.table;
     b.cur_size = 0;
     b.capacity = 0;
     b.table = nullptr;
-    return std::move(*this);
+    return *this;
 }
 
 void HashTable::clear() {
@@ -79,7 +80,7 @@ bool HashTable::erase(const Key &k) {
             cur_size -= 1;
             return true;
         }
-    }
+    }//dont know how to rewrite
     return false;
 }
 
@@ -88,7 +89,7 @@ void HashTable::resize(size_t new_capacity){
     auto *tmp = new std::list<std::pair<Key, struct Value>>[new_capacity];
     for (int i = 0; i < capacity; ++i) {
         for (auto & k : table[i]) {
-            tmp[HashFunction(k.first)].push_back({k.first, k.second});
+            tmp[HashFunction(k.first)].emplace_back(k.first, k.second);
         }
     }
     capacity = new_capacity;
@@ -102,41 +103,39 @@ bool HashTable::insert(const Key &k, const Value &v) {
     if(coef >= ResizingCoef ){
         resize(NewCapacity);
     }
-    const int index = HashFunction(k);
-    table[index].push_back({k, v});
+    const size_t index = HashFunction(k);
+    table[index].emplace_back(k, v);
     cur_size += 1;
     return true;
 }
 
 bool HashTable::contains(const Key &k) const {
     const size_t index = HashFunction(k);
-    for (auto i = table[index].begin(); i != table[index].end(); ++i) {
-        if (i->first == k) {
-            return (i != table[index].end());
-        }
+    for(auto & i : table[index]){
+        if(i.first == k) return true;
     }
     return false;
 }
 
 Value &HashTable::operator[](const Key &k) {
     const size_t index = HashFunction(k);
-    for (auto i = table[index].begin(); i != table[index].end(); ++i) {
-        if (i->first == k) {
-            return i->second;
+    for (auto & i : table[index]) {
+        if (i.first == k) {
+            return i.second;
         }
     }
-    table[index].push_back({k, Value()});
+    table[index].emplace_back(k, Value());
     return table[index].end()->second;
 }
 
 Value &HashTable::at(const Key &k){
     const size_t index = HashFunction(k);
-    for (auto i = table[index].begin(); i != table[index].end(); ++i) {
-        if (i->first == k) {
-            return i->second;
+    for (auto & i : table[index]) {
+        if (i.first == k) {
+            return i.second;
         }
     }
-    throw std::exception();
+    throw std::runtime_error("no such element");
 }
 
 const Value &HashTable::at(const Key &k) const{
@@ -146,7 +145,7 @@ const Value &HashTable::at(const Key &k) const{
             return i.second;
         }
     }
-    throw std::exception();
+    throw std::runtime_error("no such element");
 }
 
 size_t HashTable::size() const {
@@ -160,8 +159,8 @@ bool HashTable::empty() const {
 bool operator==(const HashTable &a, const HashTable &b) {
     if(a.size() != b.size()) return false;
     for(int i = 0; i < a.capacity; ++i){
-        for(auto k = a.table[i].begin(); k != a.table[i].end(); k++){
-            if(!b.contains(k->first)) return false;
+        for(auto & k : a.table[i]){
+            if(!b.contains(k.first)) return false;
         }
     }
     return true;
@@ -172,7 +171,7 @@ bool operator!=(const HashTable &a, const HashTable &b){
 }
 
 size_t HashTable::HashFunction(const Key &k) const {
-    size_t res;
-    res = ((k[0]) * (k[1]) * k[k.size()-2] * k.back()) % capacity;
-    return res;
-};
+    if (k.size() == 1) return ((k[0]) * k.back()) % capacity;
+    if (k.size() > 1) return ((k[0]) * (k[1]) * k[k.size()-2] * k.back()) % capacity;
+    return 0;
+}

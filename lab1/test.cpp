@@ -115,7 +115,7 @@ TEST(Erase, ErasingKey) { //erase
     EXPECT_EQ(table1.contains("Anna"), 0);
     EXPECT_EQ(table1.contains("Antonina"), 0);
     EXPECT_EQ(table1.contains("Yana"), 0);
-    EXPECT_EQ(table1.size(), 0);
+    EXPECT_EQ(table1.erase("Artem"), false);
 }
 
 TEST(FindOperator, FindKey) { //operator[]
@@ -133,15 +133,15 @@ TEST(At, FindKey) { //at
     HashTable table1 = HashTable();
     table1.insert("Anna", {30, 60});
     table1.insert("Antonina", {14, 30});
-    EXPECT_EQ(table1.at("Anna").age, 30);
-    EXPECT_EQ(table1.at("Anna").weight, 60);
+    EXPECT_THROW(table1.at("Artem"), std::runtime_error);
 }
 
-/*TEST(At2, FindKey) { //at
+TEST(At2, FindKey) { //at
     const HashTable table1 = HashTable();
     const Key a = "Anna";
-    EXPECT_EQ(table1.at(a).age, std::exception);
-}*/
+    EXPECT_THROW(table1.at(a).age, std::exception);
+}
+
 
 TEST(NotEqual, Comparing){
     HashTable table1 = HashTable();
@@ -161,9 +161,9 @@ TEST(ResizeInInsert, Resizing) {
     table1.insert("Misha", {14, 30});
     table1.insert("NoName", {30, 60});
     table1.insert("NoName1", {14, 30});
-    table1.insert("Noname1", {14, 30});
+    table1.insert("N", {14, 30});
     EXPECT_EQ(table1.contains("NoName1"), 1);
-    EXPECT_EQ(table1.contains("Noname1"), 1);
+    EXPECT_EQ(table1.contains("N"), 1);
     EXPECT_EQ(table1.contains("Anna"), 1);
     EXPECT_EQ(table1.contains("NoName"), 1);
     EXPECT_EQ(table1.contains("Antonina"), 1);

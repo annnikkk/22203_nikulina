@@ -35,9 +35,9 @@ public:
 
     void swap(HashTable& b);
 
-    HashTable& operator=(const HashTable& b);  //????????????????
+    HashTable& operator=(const HashTable& b);
 
-    HashTable&& operator=(HashTable &&b);
+    HashTable& operator=(HashTable &&b);
 
     void clear();
 
@@ -71,5 +71,3 @@ private:
 
     size_t HashFunction(const Key& k) const;
 };
-
-
