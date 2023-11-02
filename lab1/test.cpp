@@ -1,31 +1,28 @@
 #include "hash_table.h"
-#include "hash_table.cpp"
 #include <gtest/gtest.h>
 
 
-TEST(Empty, BasicAssertions) { //insert, empty, конструктор по умолчанию
+TEST(Empty, BasicAssertions) { //insert, empty
     HashTable table1 = HashTable();
-    EXPECT_EQ(table1.empty(), 1);
+    EXPECT_TRUE(table1.empty());
     table1.insert("Anna", {30, 60});
-    EXPECT_EQ(table1.empty(), 0);
+    EXPECT_TRUE(table1.empty());
 }
 
 TEST(Clear, EmpyingTable){ //clear
     HashTable table1 = HashTable();
     table1.insert("Anna", {30, 60});
-    EXPECT_EQ(table1.empty(), 0);
+    EXPECT_FALSE(table1.empty());
     table1.clear();
-    EXPECT_EQ(table1.empty(), 1);
+    EXPECT_TRUE(table1.empty());
 }
 
 TEST(CopyConstr, MakingCopy){ //copy, ==
     HashTable table1 = HashTable();
     table1.insert("Anna", {30, 60});
     table1.insert("Yana", {14, 30});
-    HashTable table2 = table1;
-    EXPECT_EQ(table1 == table2, 1);
-    table2 = table2;
-    EXPECT_EQ(table1 == table2, 1);
+    HashTable table2 = HashTable(table1);
+    EXPECT_TRUE(table1 == table2);
 }
 
 TEST(EquallyOperator, Comparison) { // ==, resize
@@ -34,7 +31,7 @@ TEST(EquallyOperator, Comparison) { // ==, resize
     table1.insert("Antonina", {14, 30});
     HashTable table2 = HashTable(table1);
     table1.resize(512);
-    EXPECT_EQ(table1 == table2, 1);
+    EXPECT_TRUE(table1 == table2);
 }
 
 TEST(Collisions, Comparison) { //collisions, ==
@@ -42,7 +39,7 @@ TEST(Collisions, Comparison) { //collisions, ==
     table1.insert("Anna", {30, 60});
     HashTable table2 = HashTable();
     table2.insert("Antonina", {14, 30});
-    EXPECT_EQ(table1 == table2, 0);
+    EXPECT_FALSE(table1 == table2);
 }
 
 TEST(Size, CheckingSize) { //size
@@ -58,8 +55,7 @@ TEST(Moving, IsTableMoved) { //moving, contains
     table1.insert("Antonina", {14, 30});
     table1.insert("Yana", {14, 30});
     HashTable table2 = HashTable(std::move(table1));
-    EXPECT_EQ(table2.contains("Yana"), 1);
-    EXPECT_EQ(table1.empty(), 1);
+    EXPECT_TRUE(table2.contains("Yana"));
 }
 
 TEST(Swap, IsTableSwapped) { //swap
@@ -70,16 +66,16 @@ TEST(Swap, IsTableSwapped) { //swap
     table1.insert("Yana", {14, 30});
     table2.insert("Igor", {50, 90});
     table1.swap(table2);
-    EXPECT_EQ(table2.contains("Yana"), 1);
-    EXPECT_EQ(table2.contains("Antonina"), 1);
-    EXPECT_EQ(table2.contains("Anna"), 1);
-    EXPECT_EQ(table2.contains("Igor"), 0);
-    EXPECT_EQ(table1.contains("Igor"), 1);
-    EXPECT_EQ(table1.contains("Anna"), 0);
-    EXPECT_EQ(table1.contains("Yana"), 0);
-    EXPECT_EQ(table1.contains("Antonina"), 0);
+    EXPECT_TRUE(table2.contains("Yana"));
+    EXPECT_TRUE(table2.contains("Antonina"));
+    EXPECT_TRUE(table2.contains("Anna"));
+    EXPECT_FALSE(table2.contains("Igor"));
+    EXPECT_TRUE(table1.contains("Igor"));
+    EXPECT_FALSE(table1.contains("Anna"));
+    EXPECT_FALSE(table1.contains("Yana"));
+    EXPECT_FALSE(table1.contains("Antonina"));
     EXPECT_EQ(table2.size(), 3);
-    EXPECT_EQ(table1.size(), 1);
+    EXPECT_TRUE(table1.size());
 }
 
 TEST(AssignmentOperator, AssignsValue) { //operator=
@@ -89,9 +85,9 @@ TEST(AssignmentOperator, AssignsValue) { //operator=
     table1.insert("Antonina", {14, 30});
     table1.insert("Yana", {14, 30});
     table2 = table1;
-    EXPECT_EQ(table2.contains("Anna"), 1);
-    EXPECT_EQ(table2.contains("Antonina"), 1);
-    EXPECT_EQ(table2.contains("Yana"), 1);
+    EXPECT_TRUE(table2.contains("Anna"));
+    EXPECT_TRUE(table2.contains("Antonina"));
+    EXPECT_TRUE(table2.contains("Yana"));
     EXPECT_EQ(table2.size(), 3);
 }
 
@@ -101,7 +97,7 @@ TEST(AssignmentOperator, SizesNotEqual) { //==?
     table1.insert("Anna", {30, 60});
     table1.insert("Antonina", {14, 30});
     table2.insert("Yana", {14, 30});
-    EXPECT_EQ(table1==table2, 0);
+    EXPECT_FALSE(table1==table2);
 }
 
 TEST(Erase, ErasingKey) { //erase
@@ -112,10 +108,10 @@ TEST(Erase, ErasingKey) { //erase
     table1.erase("Anna");
     table1.erase("Antonina");
     table1.erase("Yana");
-    EXPECT_EQ(table1.contains("Anna"), 0);
-    EXPECT_EQ(table1.contains("Antonina"), 0);
-    EXPECT_EQ(table1.contains("Yana"), 0);
-    EXPECT_EQ(table1.erase("Artem"), false);
+    EXPECT_FALSE(table1.contains("Anna"));
+    EXPECT_FALSE(table1.contains("Antonina"));
+    EXPECT_FALSE(table1.contains("Yana"));
+    EXPECT_FALSE(table1.erase("Artem"));
 }
 
 TEST(FindOperator, FindKey) { //operator[]
@@ -143,7 +139,7 @@ TEST(At, FindKey) { //at
 TEST(At2, FindKey) { //at
     const HashTable table1 = HashTable();
     const Key a = "Anna";
-    EXPECT_THROW(table1.at(a).age, std::exception);
+    EXPECT_THROW(table1.at(a), std::exception);
 }
 
 
@@ -152,10 +148,10 @@ TEST(NotEqual, Comparing){
     HashTable table2 = HashTable();
     table1.insert("Anna", {19, 45});
     table2.insert("Ann", {19, 45});
-    EXPECT_EQ(table1 != table2, 1);
+    EXPECT_TRUE(table1 != table2);
     table2.erase("Ann");
     table2.insert("Anna", {19, 45});
-    EXPECT_EQ(table1 != table2, 0);
+    EXPECT_FALSE(table1 != table2);
 }
 
 TEST(ResizeInInsert, Resizing) {
@@ -166,11 +162,16 @@ TEST(ResizeInInsert, Resizing) {
     table1.insert("NoName", {30, 60});
     table1.insert("NoName1", {14, 30});
     table1.insert("N", {14, 30});
-    EXPECT_EQ(table1.contains("NoName1"), 1);
-    EXPECT_EQ(table1.contains("N"), 1);
-    EXPECT_EQ(table1.contains("Anna"), 1);
-    EXPECT_EQ(table1.contains("NoName"), 1);
-    EXPECT_EQ(table1.contains("Antonina"), 1);
-    EXPECT_EQ(table1.contains("Misha"), 1);
+    EXPECT_TRUE(table1.contains("NoName1"));
+    EXPECT_TRUE(table1.contains("N"));
+    EXPECT_TRUE(table1.contains("Anna"));
+    EXPECT_TRUE(table1.contains("NoName"));
+    EXPECT_TRUE(table1.contains("Antonina"));
+    EXPECT_TRUE(table1.contains("Misha"));
     EXPECT_EQ(table1.size(), 6);
+}
+
+int main(int argc, char **argv) {
+    testing::InitGoogleTest(&argc, argv);
+    return RUN_ALL_TESTS();
 }

@@ -2,6 +2,7 @@
 
 #include<algorithm>
 #include <stdexcept>
+#include <iostream>
 
 HashTable::HashTable() : HashTable(256) {
 }
@@ -20,6 +21,7 @@ HashTable::~HashTable() {
 HashTable::HashTable(const HashTable &b) :
         capacity(b.capacity),
         cur_size(b.cur_size) {
+    std::cout<<__func__ << " copy " << std::endl;
     table = new std::list<std::pair<Key, struct Value>>[capacity];
     for (size_t i = 0; i < capacity; ++i) {
         std::copy(b.table[i].begin(), b.table[i].end(), std::back_inserter(table[i]));
@@ -27,9 +29,10 @@ HashTable::HashTable(const HashTable &b) :
 };
 
 HashTable::HashTable(HashTable &&b) :
-        cur_size(b.cur_size),
         capacity(b.capacity),
+        cur_size(b.cur_size),
         table(b.table) {
+    std::cout<<__func__ << " move" << std::endl;
     b.cur_size = 0;
     b.capacity = 0;
     b.table = nullptr;
@@ -42,6 +45,7 @@ void HashTable::swap(HashTable &b) {
 }
 
 HashTable& HashTable::operator=(const HashTable &b){
+    std::cout<<__func__ << " assign "<< std::endl;
     if(&b == this){
         return *this;
     }
@@ -56,6 +60,8 @@ HashTable& HashTable::operator=(const HashTable &b){
 }
 
 HashTable& HashTable::operator=(HashTable &&b) {
+    std::cout<<__func__ << " move" << std::endl;
+    delete[] table;
     cur_size = b.cur_size;
     capacity = b.capacity;
     table = b.table;
@@ -135,6 +141,7 @@ Value &HashTable::at(const Key &k){
             return i.second;
         }
     }
+    malloc(1);
     throw std::runtime_error("no such element");
 }
 
