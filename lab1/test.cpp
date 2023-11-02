@@ -22,9 +22,9 @@ TEST(CopyConstr, MakingCopy){ //copy, ==
     HashTable table1 = HashTable();
     table1.insert("Anna", {30, 60});
     table1.insert("Yana", {14, 30});
-    HashTable table2 = HashTable(table1);
+    HashTable table2 = table1;
     EXPECT_EQ(table1 == table2, 1);
-    table2 = HashTable(table2);
+    table2 = table2;
     EXPECT_EQ(table1 == table2, 1);
 }
 
@@ -132,7 +132,11 @@ TEST(FindOperator, FindKey) { //operator[]
 TEST(At, FindKey) { //at
     HashTable table1 = HashTable();
     table1.insert("Anna", {30, 60});
-    table1.insert("Antonina", {14, 30});
+    table1.insert("Antonina", {14, 80});
+    EXPECT_EQ(table1.at("Anna").age, 30);
+    EXPECT_EQ(table1.at("Anna").weight, 60);
+    EXPECT_EQ(table1.at("Antonina").age, 14);
+    EXPECT_EQ(table1.at("Antonina").weight, 80);
     EXPECT_THROW(table1.at("Artem"), std::runtime_error);
 }
 

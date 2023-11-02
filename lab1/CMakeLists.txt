@@ -2,8 +2,8 @@ cmake_minimum_required(VERSION 3.22)
 project(lab1)
 
 set(CMAKE_CXX_STANDARD 17)
-set(COMPILE_FLAGS "--coverage")
-set(CMAKE_EXE_LINKER_FLAGS "--coverage")
+
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fsanitize=address -fsanitize=leak -g")
 
 add_executable(lab1 main.cpp hash_table.cpp)
 
