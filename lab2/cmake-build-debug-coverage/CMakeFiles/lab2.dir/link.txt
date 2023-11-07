@@ -1,0 +1,1 @@
+/usr/bin/c++ --coverage -g CMakeFiles/lab2.dir/main.cpp.o CMakeFiles/lab2.dir/source/interpretator.cpp.o CMakeFiles/lab2.dir/source/operations.cpp.o -o lab2 
