@@ -1,3 +1,0 @@
-/home/annnik/programming/cpp-labs/22203_nikulina/lab2/cmake-build-debug-coverage/CMakeFiles/lab2.dir
-/home/annnik/programming/cpp-labs/22203_nikulina/lab2/cmake-build-debug-coverage/CMakeFiles/edit_cache.dir
-/home/annnik/programming/cpp-labs/22203_nikulina/lab2/cmake-build-debug-coverage/CMakeFiles/rebuild_cache.dir
