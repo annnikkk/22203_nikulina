@@ -1,12 +1,12 @@
 #include "interpretator.h"
 
 int main() {
-    //????
+    /*std::ofstream fin("test.txt");
+    fin << "1 1 +";
+    fin.close();
     interpretator inter;
-    std::ifstream fin("in.txt");
-    if(!fin.is_open()){
-        std::cout<<("error!!!")<<std::endl;
-    }
-    inter.ReadingFromFile(fin);
+    std::ifstream f("test.txt");
+    int res = inter.ReadingFromFile(f);
+    std::cout << res << std::endl;*/
     return 0;
 }
