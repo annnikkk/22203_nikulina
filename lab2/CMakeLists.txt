@@ -4,7 +4,7 @@ project(lab2)
 set(CMAKE_CXX_STANDARD 17)
 set(SRC source/plus.cpp source/mul.cpp source/minus.cpp source/del.cpp source/mod.cpp source/more.cpp source/less.cpp
         source/equal.cpp source/dup.cpp source/drop.cpp source/point.cpp source/swap.cpp source/rot.cpp source/over.cpp
-        source/emit.cpp source/cr.cpp)
+        source/emit.cpp source/cr.cpp source/LoopBranch.cpp source/IfBranch.cpp source/string.cpp)
 
 add_executable(${PROJECT_NAME} source/main.cpp ${SRC})
 

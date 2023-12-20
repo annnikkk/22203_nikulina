@@ -3,11 +3,11 @@
 
 class Emit: public Operations{
 public:
-    void Operation(std::stack<int> &stack) override {
+    void Operation(std::stack<int> &stack, std::istream& fin) override {
         if(stack.empty()){
             throw std::runtime_error("stack is empty");
         }
-        std::cout<< char(stack.top()) <<std::endl;
+        std::cout<< (unsigned char)(stack.top()) <<std::endl;
     }
 };
 

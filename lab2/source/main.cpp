@@ -1,12 +1,10 @@
+#include <fstream>
+#include <gtest/gtest.h>
 #include "interpretator.h"
 
 int main() {
-    /*std::ofstream fin("test.txt");
-    fin << "1 1 +";
-    fin.close();
+    std::stringstream in4(".\" bla blabla blablabla\"");
     interpretator inter;
-    std::ifstream f("test.txt");
-    int res = inter.ReadingFromFile(f);
-    std::cout << res << std::endl;*/
+    inter.Reading(in4);
     return 0;
 }

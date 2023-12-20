@@ -3,7 +3,8 @@
 
 class Dup : public Operations{
 public:
-    void Operation(std::stack<int> &stack) override {
+    void Operation(std::stack<int> &stack, std::istream& fin) override {
+        Empty_check(stack);
         stack.push(stack.top());
     }
 };

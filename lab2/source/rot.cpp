@@ -3,7 +3,7 @@
 
 class Rot : public Operations{
 public:
-    void Operation(std::stack<int> &stack) override {
+    void Operation(std::stack<int> &stack, std::istream& fin) override {
         Empty_check(stack);
         int first = stack.top();
         stack.pop();
@@ -17,11 +17,7 @@ public:
         stack.push(third);
         stack.push(second);
     }
-    static void Empty_check(std::stack<int> &stack){
-        if(stack.empty()){
-            throw std::runtime_error("stack is empty");
-        }
-    }
+
 };
 
 

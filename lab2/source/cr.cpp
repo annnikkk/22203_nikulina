@@ -3,18 +3,13 @@
 
 class Cr: public Operations{
 public:
-    void Operation(std::stack<int> &stack) override {
+    void Operation(std::stack<int> &stack, std::istream& fin) override {
         Empty_check(stack);
         int previous_top = stack.top();
         stack.pop();
         Empty_check(stack);
         std::cout<< previous_top << "\n" << stack.top() << std::endl;
         stack.push(previous_top);
-    }
-    static void Empty_check(std::stack<int> &stack){
-        if(stack.empty()){
-            throw std::runtime_error("stack is empty");
-        }
     }
 };
 
