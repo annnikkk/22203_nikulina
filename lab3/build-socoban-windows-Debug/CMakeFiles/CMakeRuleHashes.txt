@@ -1,0 +1,4 @@
+# Hashes of file build rules.
+a2dac9d9c5a75065b8bb834f712b44d2 CMakeFiles/socoban_autogen
+a2dac9d9c5a75065b8bb834f712b44d2 CMakeFiles/socoban_autogen_timestamp_deps
+3fe461455d4513cebc2e04fa2d10d581 socoban_autogen/timestamp
