@@ -1,9 +1,0 @@
-D:/programming/projects/oop-labs/build-socoban-windows-Debug/CMakeFiles/socoban.dir
-D:/programming/projects/oop-labs/build-socoban-windows-Debug/CMakeFiles/edit_cache.dir
-D:/programming/projects/oop-labs/build-socoban-windows-Debug/CMakeFiles/rebuild_cache.dir
-D:/programming/projects/oop-labs/build-socoban-windows-Debug/CMakeFiles/list_install_components.dir
-D:/programming/projects/oop-labs/build-socoban-windows-Debug/CMakeFiles/install.dir
-D:/programming/projects/oop-labs/build-socoban-windows-Debug/CMakeFiles/install/local.dir
-D:/programming/projects/oop-labs/build-socoban-windows-Debug/CMakeFiles/install/strip.dir
-D:/programming/projects/oop-labs/build-socoban-windows-Debug/CMakeFiles/socoban_autogen_timestamp_deps.dir
-D:/programming/projects/oop-labs/build-socoban-windows-Debug/CMakeFiles/socoban_autogen.dir
