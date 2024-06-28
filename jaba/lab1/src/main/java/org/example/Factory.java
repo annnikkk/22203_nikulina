@@ -18,7 +18,7 @@ public class Factory {
             LogManager.getLogManager().readConfiguration(config);
             logger = Logger.getLogger(Interpretator.class.getName());
         } catch (Exception e){
-            System.err.printf("Error in opening log file");
+            System.err.print("Error in opening log file");
         }
     }
     private HashMap<String, Class<? extends Operations>> CallbackMap = new HashMap<>();
@@ -52,7 +52,7 @@ public class Factory {
         CallbackMap.put(opName, opClass);
     }
 
-    public class PropertiesLoadingException extends RuntimeException {
+    public static class PropertiesLoadingException extends RuntimeException {
         public PropertiesLoadingException(String message){
             super(message);
         }

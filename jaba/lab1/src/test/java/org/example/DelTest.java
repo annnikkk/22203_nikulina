@@ -8,9 +8,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-
-
-public class DelTest{
+public class DelTest {
     @Test
     public void testDelOperation() {
         String input = "7208 53 / 10 /";
@@ -26,5 +24,5 @@ public class DelTest{
         InputStream inputStream1 = new ByteArrayInputStream(input1.getBytes());
         Scanner scanner1 = new Scanner(inputStream1);
         assertThrows(java.lang.ArithmeticException.class, () -> interpretator.Reading(scanner1));
-        }
+    }
 }

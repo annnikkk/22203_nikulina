@@ -1,5 +1,6 @@
 package org.example;
 
+import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.NoSuchElementException;
 import java.util.Objects;
@@ -8,7 +9,7 @@ import java.util.Stack;
 
 public class LoopBranch extends Operations{
     @Override
-    public void Operation(Stack<Integer> stack, Scanner scanner) {
+    public void Operation(Stack<Integer> stack, Scanner scanner, OutputStream s) {
         int previous_top = stack.pop();
         int stack_top = stack.pop();
         String word = null;

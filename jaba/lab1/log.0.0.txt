@@ -1,300 +1,46 @@
-Mar 18, 2024 1:26:19 AM org.example.Factory <init>
+Mar 25, 2024 9:38:25 AM org.example.Factory <init>
 INFO: Операция drop зарегистрирована.
-Mar 18, 2024 1:26:19 AM org.example.Factory <init>
+Mar 25, 2024 9:38:25 AM org.example.Factory <init>
 INFO: Операция over зарегистрирована.
-Mar 18, 2024 1:26:19 AM org.example.Factory <init>
+Mar 25, 2024 9:38:25 AM org.example.Factory <init>
 INFO: Операция mod зарегистрирована.
-Mar 18, 2024 1:26:19 AM org.example.Factory <init>
+Mar 25, 2024 9:38:25 AM org.example.Factory <init>
 INFO: Операция swap зарегистрирована.
-Mar 18, 2024 1:26:19 AM org.example.Factory <init>
+Mar 25, 2024 9:38:25 AM org.example.Factory <init>
 INFO: Операция * зарегистрирована.
-Mar 18, 2024 1:26:19 AM org.example.Factory <init>
+Mar 25, 2024 9:38:25 AM org.example.Factory <init>
 INFO: Операция + зарегистрирована.
-Mar 18, 2024 1:26:19 AM org.example.Factory <init>
+Mar 25, 2024 9:38:25 AM org.example.Factory <init>
 INFO: Операция do зарегистрирована.
-Mar 18, 2024 1:26:19 AM org.example.Factory <init>
+Mar 25, 2024 9:38:25 AM org.example.Factory <init>
 INFO: Операция - зарегистрирована.
-Mar 18, 2024 1:26:19 AM org.example.Factory <init>
+Mar 25, 2024 9:38:25 AM org.example.Factory <init>
 INFO: Операция . зарегистрирована.
-Mar 18, 2024 1:26:19 AM org.example.Factory <init>
+Mar 25, 2024 9:38:25 AM org.example.Factory <init>
 INFO: Операция cr зарегистрирована.
-Mar 18, 2024 1:26:19 AM org.example.Factory <init>
+Mar 25, 2024 9:38:25 AM org.example.Factory <init>
 INFO: Операция / зарегистрирована.
-Mar 18, 2024 1:26:19 AM org.example.Factory <init>
+Mar 25, 2024 9:38:25 AM org.example.Factory <init>
 INFO: Операция ." зарегистрирована.
-Mar 18, 2024 1:26:19 AM org.example.Factory <init>
+Mar 25, 2024 9:38:25 AM org.example.Factory <init>
 INFO: Операция rot зарегистрирована.
-Mar 18, 2024 1:26:19 AM org.example.Factory <init>
+Mar 25, 2024 9:38:25 AM org.example.Factory <init>
 INFO: Операция emit зарегистрирована.
-Mar 18, 2024 1:26:19 AM org.example.Factory <init>
+Mar 25, 2024 9:38:25 AM org.example.Factory <init>
 INFO: Операция < зарегистрирована.
-Mar 18, 2024 1:26:19 AM org.example.Factory <init>
+Mar 25, 2024 9:38:25 AM org.example.Factory <init>
 INFO: Операция = зарегистрирована.
-Mar 18, 2024 1:26:19 AM org.example.Factory <init>
+Mar 25, 2024 9:38:25 AM org.example.Factory <init>
 INFO: Операция if зарегистрирована.
-Mar 18, 2024 1:26:19 AM org.example.Factory <init>
+Mar 25, 2024 9:38:25 AM org.example.Factory <init>
 INFO: Операция dup зарегистрирована.
-Mar 18, 2024 1:26:19 AM org.example.Factory <init>
+Mar 25, 2024 9:38:25 AM org.example.Factory <init>
 INFO: Операция > зарегистрирована.
-Mar 18, 2024 1:26:19 AM org.example.Interpretator StackOperations
-INFO: Положили на стек 10
-Mar 18, 2024 1:26:19 AM org.example.Interpretator StackOperations
-INFO: Положили на стек 5
-Mar 18, 2024 1:26:19 AM org.example.Interpretator StackOperations
-INFO: Положили на стек 5
-Mar 18, 2024 1:26:19 AM org.example.Interpretator StackOperations
-INFO: Положили на стек 6
-Mar 18, 2024 1:26:19 AM org.example.Interpretator StackOperations
-INFO: Положили на стек 7
-Mar 18, 2024 1:26:19 AM org.example.Interpretator StackOperations
-INFO: Положили на стек 8
-Mar 18, 2024 1:26:19 AM org.example.Interpretator StackOperations
-INFO: Положили на стек 9
-Mar 18, 2024 1:26:19 AM org.example.Interpretator StackOperations
-INFO: Выполнили операцию do
-Mar 18, 2024 1:26:19 AM org.example.Interpretator StackOperations
-INFO: Выполнили операцию +
-Mar 18, 2024 1:26:19 AM org.example.Interpretator StackOperations
-INFO: Выполнили операцию +
-Mar 18, 2024 1:26:19 AM org.example.Interpretator StackOperations
-INFO: Выполнили операцию +
-Mar 18, 2024 1:26:19 AM org.example.Interpretator StackOperations
-INFO: Выполнили операцию +
-Mar 18, 2024 1:26:19 AM org.example.Interpretator StackOperations
-INFO: Положили на стек 10
-Mar 18, 2024 1:26:19 AM org.example.Interpretator StackOperations
-INFO: Положили на стек 15
-Mar 18, 2024 1:26:19 AM org.example.Interpretator StackOperations
-INFO: Положили на стек 10
-Mar 18, 2024 1:26:19 AM org.example.Interpretator StackOperations
-INFO: Положили на стек 15
-Mar 18, 2024 1:26:19 AM org.example.Interpretator StackOperations
-INFO: Положили на стек 10
-Mar 18, 2024 1:26:19 AM org.example.Interpretator StackOperations
-INFO: Положили на стек 5
-Mar 18, 2024 1:26:19 AM org.example.Interpretator StackOperations
-INFO: Положили на стек 5
-Mar 18, 2024 1:26:19 AM org.example.Interpretator StackOperations
-INFO: Положили на стек 5
-Mar 18, 2024 1:26:19 AM org.example.Interpretator StackOperations
-INFO: Выполнили операцию +
-Mar 18, 2024 1:26:19 AM org.example.Interpretator StackOperations
-INFO: Положили на стек 6
-Mar 18, 2024 1:26:19 AM org.example.Interpretator StackOperations
-INFO: Положили на стек 6
-Mar 18, 2024 1:26:19 AM org.example.Interpretator StackOperations
-INFO: Выполнили операцию +
-Mar 18, 2024 1:26:19 AM org.example.Interpretator StackOperations
-INFO: Положили на стек 7
-Mar 18, 2024 1:26:19 AM org.example.Interpretator StackOperations
-INFO: Положили на стек 7
-Mar 18, 2024 1:26:19 AM org.example.Interpretator StackOperations
-INFO: Выполнили операцию +
-Mar 18, 2024 1:26:19 AM org.example.Interpretator StackOperations
-INFO: Положили на стек 8
-Mar 18, 2024 1:26:19 AM org.example.Interpretator StackOperations
-INFO: Положили на стек 8
-Mar 18, 2024 1:26:19 AM org.example.Interpretator StackOperations
-INFO: Выполнили операцию +
-Mar 18, 2024 1:26:19 AM org.example.Interpretator StackOperations
-INFO: Положили на стек 9
-Mar 18, 2024 1:26:19 AM org.example.Interpretator StackOperations
-INFO: Положили на стек 9
-Mar 18, 2024 1:26:19 AM org.example.Interpretator StackOperations
-INFO: Выполнили операцию +
-Mar 18, 2024 1:26:19 AM org.example.Interpretator StackOperations
-INFO: Выполнили операцию do
-Mar 18, 2024 1:26:19 AM org.example.Interpretator StackOperations
-INFO: Положили на стек 0
-Mar 18, 2024 1:26:19 AM org.example.Interpretator StackOperations
-INFO: Выполнили операцию if
-Mar 18, 2024 1:26:19 AM org.example.Interpretator StackOperations
-INFO: Положили на стек 2
-Mar 18, 2024 1:26:19 AM org.example.Interpretator StackOperations
-INFO: Положили на стек 2
-Mar 18, 2024 1:26:19 AM org.example.Interpretator StackOperations
-INFO: Выполнили операцию +
-Mar 18, 2024 1:26:19 AM org.example.Interpretator StackOperations
-INFO: Выполнили операцию if
-Mar 18, 2024 1:26:19 AM org.example.Interpretator StackOperations
-INFO: Положили на стек 0
-Mar 18, 2024 1:26:19 AM org.example.Interpretator StackOperations
-INFO: Положили на стек 20
-Mar 18, 2024 1:26:19 AM org.example.Interpretator StackOperations
-INFO: Положили на стек 20
-Mar 18, 2024 1:26:19 AM org.example.Interpretator StackOperations
-INFO: Выполнили операцию +
-Mar 18, 2024 1:26:19 AM org.example.Interpretator StackOperations
-INFO: Выполнили операцию if
-Mar 18, 2024 1:26:19 AM org.example.Interpretator StackOperations
-INFO: Положили на стек 2
-Mar 18, 2024 1:26:19 AM org.example.Interpretator StackOperations
-INFO: Положили на стек 2
-Mar 18, 2024 1:26:19 AM org.example.Interpretator StackOperations
-INFO: Выполнили операцию +
-Mar 18, 2024 1:26:19 AM org.example.Interpretator StackOperations
-INFO: Выполнили операцию if
-Mar 18, 2024 1:26:19 AM org.example.Interpretator StackOperations
-INFO: Положили на стек 0
-Mar 18, 2024 1:26:19 AM org.example.Interpretator StackOperations
-INFO: Положили на стек 0
-Mar 18, 2024 1:26:19 AM org.example.Interpretator StackOperations
-INFO: Положили на стек 5
-Mar 18, 2024 1:26:19 AM org.example.Interpretator StackOperations
-INFO: Положили на стек 2
-Mar 18, 2024 1:26:19 AM org.example.Interpretator StackOperations
-INFO: Выполнили операцию +
-Mar 18, 2024 1:26:19 AM org.example.Interpretator StackOperations
-INFO: Положили на стек 5
-Mar 18, 2024 1:26:19 AM org.example.Interpretator StackOperations
-INFO: Положили на стек 0
-Mar 18, 2024 1:26:19 AM org.example.Interpretator StackOperations
-INFO: Выполнили операцию if
-Mar 18, 2024 1:26:19 AM org.example.Interpretator StackOperations
-INFO: Положили на стек 5000
-Mar 18, 2024 1:26:20 AM org.example.Interpretator StackOperations
-INFO: Выполнили операцию +
-Mar 18, 2024 1:26:20 AM org.example.Interpretator StackOperations
-INFO: Выполнили операцию if
-Mar 18, 2024 1:26:20 AM org.example.Interpretator StackOperations
-INFO: Выполнили операцию if
-Mar 18, 2024 1:26:20 AM org.example.Interpretator StackOperations
-INFO: Положили на стек 2
-Mar 18, 2024 1:26:20 AM org.example.Interpretator StackOperations
-INFO: Положили на стек 2
-Mar 18, 2024 1:26:20 AM org.example.Interpretator StackOperations
-INFO: Положили на стек 2
-Mar 18, 2024 1:26:20 AM org.example.Interpretator StackOperations
-INFO: Выполнили операцию +
-Mar 18, 2024 1:26:20 AM org.example.Interpretator StackOperations
-INFO: Положили на стек 2
-Mar 18, 2024 1:26:20 AM org.example.Interpretator StackOperations
-INFO: Положили на стек 2
-Mar 18, 2024 1:26:20 AM org.example.Interpretator StackOperations
-INFO: Положили на стек 2
-Mar 18, 2024 1:26:20 AM org.example.Interpretator StackOperations
-INFO: Выполнили операцию +
-Mar 18, 2024 1:26:20 AM org.example.Interpretator StackOperations
-INFO: Положили на стек 0
-Mar 18, 2024 1:26:20 AM org.example.Interpretator StackOperations
-INFO: Положили на стек 2
-Mar 18, 2024 1:26:20 AM org.example.Interpretator StackOperations
-INFO: Выполнили операцию -
-Mar 18, 2024 1:26:20 AM org.example.Interpretator StackOperations
-INFO: Положили на стек 0
-Mar 18, 2024 1:26:20 AM org.example.Interpretator StackOperations
-INFO: Положили на стек 19
-Mar 18, 2024 1:26:20 AM org.example.Interpretator StackOperations
-INFO: Выполнили операцию -
-Mar 18, 2024 1:26:20 AM org.example.Interpretator StackOperations
+Mar 25, 2024 9:38:25 AM org.example.Interpretator StackOperations
 INFO: Положили на стек 100000
-Mar 18, 2024 1:26:20 AM org.example.Interpretator StackOperations
+Mar 25, 2024 9:38:25 AM org.example.Interpretator StackOperations
 INFO: Положили на стек 2000000
-Mar 18, 2024 1:26:20 AM org.example.Interpretator StackOperations
+Mar 25, 2024 9:38:25 AM org.example.Interpretator StackOperations
 INFO: Выполнили операцию +
-Mar 18, 2024 1:26:20 AM org.example.Interpretator StackOperations
+Mar 25, 2024 9:38:25 AM org.example.Interpretator StackOperations
 INFO: Положили на стек 0
-Mar 18, 2024 1:26:20 AM org.example.Interpretator StackOperations
-INFO: Положили на стек 5
-Mar 18, 2024 1:26:20 AM org.example.Interpretator StackOperations
-INFO: Выполнили операцию dup
-Mar 18, 2024 1:26:20 AM org.example.Interpretator StackOperations
-INFO: Выполнили операцию +
-Mar 18, 2024 1:26:20 AM org.example.Interpretator StackOperations
-INFO: Положили на стек 2000000
-Mar 18, 2024 1:26:20 AM org.example.Interpretator StackOperations
-INFO: Положили на стек 1000000
-Mar 18, 2024 1:26:20 AM org.example.Interpretator StackOperations
-INFO: Выполнили операцию -
-Mar 18, 2024 1:26:20 AM org.example.Interpretator StackOperations
-INFO: Положили на стек 1000000
-Mar 18, 2024 1:26:20 AM org.example.Interpretator StackOperations
-INFO: Выполнили операцию -
-Mar 18, 2024 1:26:20 AM org.example.Interpretator StackOperations
-INFO: Положили на стек -1
-Mar 18, 2024 1:26:20 AM org.example.Interpretator StackOperations
-INFO: Выполнили операцию -
-Mar 18, 2024 1:26:20 AM org.example.Interpretator StackOperations
-INFO: Положили на стек 65
-Mar 18, 2024 1:26:20 AM org.example.Interpretator StackOperations
-INFO: Выполнили операцию emit
-Mar 18, 2024 1:26:20 AM org.example.Interpretator StackOperations
-INFO: Положили на стек 65
-Mar 18, 2024 1:26:20 AM org.example.Interpretator StackOperations
-INFO: Положили на стек 5
-Mar 18, 2024 1:26:20 AM org.example.Interpretator StackOperations
-INFO: Выполнили операцию -
-Mar 18, 2024 1:26:20 AM org.example.Interpretator StackOperations
-INFO: Положили на стек 70
-Mar 18, 2024 1:26:20 AM org.example.Interpretator StackOperations
-INFO: Выполнили операцию <
-Mar 18, 2024 1:26:20 AM org.example.Interpretator StackOperations
-INFO: Положили на стек 70
-Mar 18, 2024 1:26:20 AM org.example.Interpretator StackOperations
-INFO: Положили на стек 0
-Mar 18, 2024 1:26:20 AM org.example.Interpretator StackOperations
-INFO: Выполнили операцию -
-Mar 18, 2024 1:26:20 AM org.example.Interpretator StackOperations
-INFO: Положили на стек 70
-Mar 18, 2024 1:26:20 AM org.example.Interpretator StackOperations
-INFO: Выполнили операцию <
-Mar 18, 2024 1:26:20 AM org.example.Interpretator StackOperations
-INFO: Положили на стек 75
-Mar 18, 2024 1:26:20 AM org.example.Interpretator StackOperations
-INFO: Положили на стек 10
-Mar 18, 2024 1:26:20 AM org.example.Interpretator StackOperations
-INFO: Выполнили операцию <
-Mar 18, 2024 1:26:20 AM org.example.Interpretator StackOperations
-INFO: Положили на стек 100
-Mar 18, 2024 1:26:20 AM org.example.Interpretator StackOperations
-INFO: Положили на стек 10
-Mar 18, 2024 1:26:20 AM org.example.Interpretator StackOperations
-INFO: Положили на стек 5
-Mar 18, 2024 1:26:20 AM org.example.Interpretator StackOperations
-INFO: Положили на стек 7
-Mar 18, 2024 1:26:20 AM org.example.Interpretator StackOperations
-INFO: Положили на стек 8
-Mar 18, 2024 1:26:20 AM org.example.Interpretator StackOperations
-INFO: Выполнили операцию drop
-Mar 18, 2024 1:26:20 AM org.example.Interpretator StackOperations
-INFO: Положили на стек 90
-Mar 18, 2024 1:26:20 AM org.example.Interpretator StackOperations
-INFO: Положили на стек 140
-Mar 18, 2024 1:26:20 AM org.example.Interpretator StackOperations
-INFO: Выполнили операцию *
-Mar 18, 2024 1:26:20 AM org.example.Interpretator StackOperations
-INFO: Положили на стек 15
-Mar 18, 2024 1:26:20 AM org.example.Interpretator StackOperations
-INFO: Выполнили операцию *
-Mar 18, 2024 1:26:20 AM org.example.Interpretator StackOperations
-INFO: Положили на стек 7208
-Mar 18, 2024 1:26:20 AM org.example.Interpretator StackOperations
-INFO: Положили на стек 10
-Mar 18, 2024 1:26:20 AM org.example.Interpretator StackOperations
-INFO: Выполнили операцию mod
-Mar 18, 2024 1:26:20 AM org.example.Interpretator StackOperations
-INFO: Положили на стек 5
-Mar 18, 2024 1:26:20 AM org.example.Interpretator StackOperations
-INFO: Выполнили операцию mod
-Mar 18, 2024 1:26:20 AM org.example.Interpretator StackOperations
-INFO: Положили на стек 10
-Mar 18, 2024 1:26:20 AM org.example.Interpretator StackOperations
-INFO: Положили на стек 0
-Mar 18, 2024 1:26:20 AM org.example.Interpretator StackOperations
-INFO: Положили на стек 0
-Mar 18, 2024 1:26:20 AM org.example.Interpretator StackOperations
-INFO: Положили на стек 7208
-Mar 18, 2024 1:26:20 AM org.example.Interpretator StackOperations
-INFO: Положили на стек 53
-Mar 18, 2024 1:26:20 AM org.example.Interpretator StackOperations
-INFO: Выполнили операцию /
-Mar 18, 2024 1:26:20 AM org.example.Interpretator StackOperations
-INFO: Положили на стек 10
-Mar 18, 2024 1:26:20 AM org.example.Interpretator StackOperations
-INFO: Выполнили операцию /
-Mar 18, 2024 1:26:20 AM org.example.Interpretator StackOperations
-INFO: Положили на стек 10
-Mar 18, 2024 1:26:20 AM org.example.Interpretator StackOperations
-INFO: Положили на стек 0
-Mar 18, 2024 1:26:20 AM org.example.Interpretator StackOperations
-INFO: Выполнили операцию ."

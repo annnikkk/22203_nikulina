@@ -1,12 +1,15 @@
 package org.example;
 
+import java.io.OutputStream;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
 import java.util.Stack;
+import java.io.PrintStream;
+
 
 public class Str extends Operations{
     @Override
-    public void Operation(Stack<Integer> stack, Scanner scanner) {
+    public void Operation(Stack<Integer> stack, Scanner scanner, OutputStream s) {
         String word = null;
         try {
             word = scanner.next();
@@ -22,7 +25,8 @@ public class Str extends Operations{
             }
         }
         word = word.substring(0, word.length() - 1);
-        System.out.println(word);
-
+        PrintStream ps = new PrintStream(s);
+        ps.println(word);
+        ps.close();
     }
 }

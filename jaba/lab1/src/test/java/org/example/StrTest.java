@@ -12,6 +12,7 @@ import java.util.Scanner;
 
 
 class StrTest {
+
     @Test
     public void testStrOperation() {
         String input = ".\" bla blabla blablabla\"";
@@ -28,5 +29,4 @@ class StrTest {
         String actualOutput = outputStream.toString().trim();
         assertEquals(expectedOutput, actualOutput);
     }
-
 }

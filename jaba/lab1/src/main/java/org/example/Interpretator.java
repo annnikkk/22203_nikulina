@@ -1,10 +1,9 @@
 package org.example;
 
 import java.io.FileInputStream;
-import java.util.Properties;
+import java.io.OutputStream;
 import java.util.Scanner;
 import java.util.Stack;
-import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.LogManager;
 import java.util.logging.Logger;
@@ -26,7 +25,8 @@ public class Interpretator {
         Stack<Integer> stack = new Stack<>();
         while (scanner.hasNext()) {
             String word = scanner.next();
-            StackOperations(word, stack, scanner);
+            java.io.OutputStream outputStream;//написать чему она равна
+            StackOperations(word, stack, scanner, outputStream);
         }
         if (!stack.empty()){
             return stack.peek();
@@ -35,7 +35,7 @@ public class Interpretator {
         }
     }
 
-    public static void StackOperations(String word, Stack<Integer> stack, Scanner scanner){
+    public static void StackOperations(String word, Stack<Integer> stack, Scanner scanner, OutputStream outputStream){
         if(!Factory.getInstance().FindOperation(word)){
             try {
                 stack.push(Integer.parseInt(word));
@@ -44,7 +44,7 @@ public class Interpretator {
                 System.err.printf("Error: Invalid number - %s%n", word);
             }
         } else {
-            Factory.getInstance().CreateOperation(word).Operation(stack, scanner);
+            Factory.getInstance().CreateOperation(word).Operation(stack, scanner, outputStream);
             logger.log(Level.INFO, "Выполнили операцию " + word);
         }
     }

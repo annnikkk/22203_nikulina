@@ -1,5 +1,6 @@
 package org.example;
 
+import java.io.OutputStream;
 import java.util.Objects;
 import java.util.Scanner;
 import java.util.Stack;
@@ -8,7 +9,7 @@ import java.util.NoSuchElementException;
 
 public class IfBranch extends Operations{
     @Override
-    public void Operation(Stack<Integer> stack, Scanner scanner){
+    public void Operation(Stack<Integer> stack, Scanner scanner, OutputStream s){
         int if_counter = 1;
         String word = null;
         if(stack.peek() == 0){
